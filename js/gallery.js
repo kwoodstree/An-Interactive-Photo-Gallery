@@ -4,7 +4,7 @@ function search_pictures() {
 	let x = document.getElementsByClassName('image');
 
 	for (i = 0; i < x.length; i++) {
-		if (!x[i].innerHTML.toLowerCase().includes(input)) {
+		if (!x[i].getAttribute('data-caption').toLowerCase().includes(input)) {
 			x[i].style.display="none";
 		}
 		else {
